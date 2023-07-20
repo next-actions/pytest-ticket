@@ -1,12 +1,12 @@
 # pytest-ticket
 
-This is a `pytest` plugin that adds the ability to filter test cases by
+This is a `pytest` plugin that adds the ability to filter test cases by an
 associated ticket of a tracker of your choice.
 
 It adds:
 * `ticket_tools` option to `[pytest]` section of `pytest.ini` to define ticket
   tools (or trackers) of your choice
-* `@pytest.mark.ticket` mark to associate test case with one or more tickets
+* `@pytest.mark.ticket` mark to associate a test case with one or more tickets
 * `--ticket` command line option to filter out test cases that are not
   associated with selected ticket(s)
 
@@ -43,7 +43,7 @@ It adds:
 
 ## Ticket mark
 
-The ticket mark takes one or more keyword arguments as configured in pytest.ini
+The ticket mark takes one or more keyword arguments as configured in `pytest.ini`
 `ticket_tools` option, each argument can take a single value or list of values.
 
 ```
