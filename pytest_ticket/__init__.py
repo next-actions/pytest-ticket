@@ -71,7 +71,7 @@ class TicketPlugin(object):
         if not isinstance(item, OutputDataItem):
             raise ValueError(f"Unexpected item type: {type(item)}")
 
-        data: list[str] = item.item.stash[TicketStashKey]
+        data: list[str] = item.item.stash.get(TicketStashKey, None)
         if data:
             item.extra.setdefault("pytest-ticket", {})["Tickets"] = ", ".join(data)
 
